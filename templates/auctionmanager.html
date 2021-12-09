@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+      {%block messages%}
+        
+        <center><div class="alert alert-info" role="alert">
+            {{ messages }}
+          </div> </center>
+        
+        {% endblock %}
+        <center style="padding-left: 30%; padding-right: 30%; padding-top: 5%;">
+            {%block teams%}
+            <br><br><br>
+            {% if bids %}
+            
+        
+        
+        
+                <div class="col-12">
+                 
+                    <div class="">
+                        <ul class="content-grid large-block-grid-4 medium-block-grid-3 small-block-grid-1 flex-grid u-negative-margin team-card-grid">
+                            
+                            {% for bid in bids %}
+        
+               <p>{{bid}}</p>
+        
+               {% endfor %}
+        
+               </ul>
+               </div>
+               </div>
+        
+        
+        
+        
+        
+            <tr><td></td></tr>
+              </table>
+              {% else %}
+              <h1>No Bids.</h1>
+              {% endif %}
+            </div>
+            
+            {% endblock %}
+          <br>
+          <br>
+          <br>
+          <br>
+          <a href="/resolvebid"><button class="btn btn-primary" id="back" type="submit">Resolve bids</button></a>
+        </center>
+    </body>
+</html>

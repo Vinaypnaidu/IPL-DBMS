@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        {%block messages%}
+        
+        <center><div class="alert alert-info" role="alert">
+            {{ messages }}
+          </div> </center>
+
+        
+        {% endblock %}<br>
+        <center ><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+          Click here to place bid
+        </button> </center>
+        <center style="padding-left: 30%; padding-right: 30%;">
+            {%block players%}
+            <br><br><br>
+            {% if unsoldplayers %}
+            <div id="info_div">
+            <table class="table is-striped is-fullwidth">
+            
+            {% for player in unsoldplayers %}
+            <center>
+              <div style="width: 600px;" class="alert alert-info" role="alert">
+                Player name - {{player[2]}} <br> Age - {{player[3]}} <br> Role -  {{player[4]}} <br> Base price - {{player[5]}} Present max bid - {{player[7]}}
+                </div> </center>
+              {% endfor %}
+              </table>
+              {% else %}
+              <h1>No Unsold Players.</h1>
+              {% endif %}
+            </div>
+            
+            {% endblock %}
+          <br>
+          <br>
+          
+            <!-- Button trigger modal -->
+            
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Confirmation</h5>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/placebid" method="POST">
+  
+            
+          <div class="form-group">
+            <label for="exampleInputEmail1">Player</label>
+            <input required type="text" class="form-control" name="player" aria-describedby="emailHelp" placeholder="Player Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Bid Amount</label>
+            <input required type="number" class="form-control" name="bidamount" aria-describedby="emailHelp" placeholder="Bid Amount in Lakhs">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Confirm Username</label>
+            <input required type="text" class="form-control" name="newuser" aria-describedby="emailHelp" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Confirm Password</label>
+            <input required type="password" class="form-control" name="newpassword" aria-describedby="emailHelp" placeholder="Password">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Confirm</button> 
+            </div>
+          </form>
+              </div>
+      
+    </div>
+  </div>
+</div>
+            
+
+            
+
+         
+          <a href="/"><button class="btn btn-primary" id="back" type="submit">Home</button></a>
+        </center> <br>
+    </body>
+</html>

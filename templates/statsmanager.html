@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        {%block messages%}
+        
+        <center><div class="alert alert-info" role="alert">
+            {{ messages }}
+          </div> </center>
+        
+        {% endblock %}
+        <center style="padding-left: 30%; padding-right: 30%;">
+        <form action="/addmatch" method="POST">
+  
+              <div class="form-group">
+                <label for="exampleInputEmail1">Won By</label>
+                <input required type="text" class="form-control" name="wonby" aria-describedby="emailHelp" placeholder="Match Winner">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Umpired By</label>
+                <input required type="text" class="form-control" name="umpiredby" aria-describedby="emailHelp" placeholder="Match Umpire">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Match Revenue</label>
+                <input required type="number" class="form-control" name="revenue" aria-describedby="emailHelp" placeholder="Enter Match Revenue">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="exampleInputEmail1">Match Date</label>
+                <input required type="text" class="form-control" name="mdate" aria-describedby="emailHelp" placeholder="yyyy-mm-dd">
+                  
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Venue</label>
+                    <input required type="text" class="form-control" name="venue" aria-describedby="emailHelp" placeholder="Enter Venue">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="exampleInputEmail1">Team 1</label>
+                <input required type="text" class="form-control" name="teamone" aria-describedby="emailHelp" placeholder="Enter Team 1">
+                  
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Team 2</label>
+                    <input required type="text" class="form-control" name="teamtwo" aria-describedby="emailHelp" placeholder="Enter Team 2">
+                </div>
+              </div>
+
+              
+            <br>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                <label >Team 1 stats</label>
+                <br><br>
+                  <label for="inputEmail4">Player 1</label>
+                  <input required type="text" class="form-control" name="player1team1" id="inputEmail4" placeholder="Name">
+                  <input required type="number" class="form-control" name="player1runs1" id="inputEmail4" placeholder="Runs">
+                  <input required type="number" class="form-control" name="player1wickets1" id="inputEmail4" placeholder="Wickets">
+                  <input required type="number" class="form-control" name="player1ballsplayed1" id="inputEmail4" placeholder="Balls Played">
+                  <input required type="number" class="form-control" name="player1ballsbowled1" id="inputEmail4" placeholder="Balls Bowled">
+                </div>
+                <div class="form-group col-md-6">
+                <label >Team 2 stats</label>
+                <br><br>
+                  <label for="inputPassword4">Player 1</label>
+                  <input required type="text" class="form-control" name="player1team2" id="inputEmail4" placeholder="Name">
+                  <input required type="number" class="form-control" name="player1runs2" id="inputEmail4" placeholder="Runs">
+                  <input required type="number" class="form-control" name="player1wickets2" id="inputEmail4" placeholder="Wickets">
+                  <input required type="number" class="form-control" name="player1ballsplayed2" id="inputEmail4" placeholder="Balls Played">
+                  <input required type="number" class="form-control" name="player1ballsbowled2" id="inputEmail4" placeholder="Balls Bowled">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                <br>
+                  <label for="inputEmail4">Player 2</label>
+                  <input required type="text" class="form-control" name="player2team1" id="inputEmail4" placeholder="Name">
+                  <input required type="number" class="form-control" name="player2runs1" id="inputEmail4" placeholder="Runs">
+                  <input required type="number" class="form-control" name="player2wickets1" id="inputEmail4" placeholder="Wickets">
+                  <input required type="number" class="form-control" name="player2ballsplayed1" id="inputEmail4" placeholder="Balls Played">
+                  <input required type="number" class="form-control" name="player2ballsbowled1" id="inputEmail4" placeholder="Balls Bowled">
+                </div>
+                <div class="form-group col-md-6">                <br>
+                  <label for="inputPassword4">Player 2</label>
+                  <input required type="text" class="form-control" name="player2team2" id="inputEmail4" placeholder="Name">
+                  <input required type="number" class="form-control" name="player2runs2" id="inputEmail4" placeholder="Runs">
+                  <input required type="number" class="form-control" name="player2wickets2" id="inputEmail4" placeholder="Wickets">
+                  <input required type="number" class="form-control" name="player2ballsplayed2" id="inputEmail4" placeholder="Balls Played">
+                  <input required type="number" class="form-control" name="player2ballsbowled2" id="inputEmail4" placeholder="Balls Bowled">
+                </div>
+              </div>
+
+              
+
+              <br>
+
+            <button type="submit" class="btn btn-primary">Add Match</button>
+          </form>
+          <br>
+          <br>
+          <br>
+          <br>
+          <a href="/"><button class="btn btn-primary" id="back" type="submit">Home</button></a>
+        </center> <br>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <body>
+        {%block messages%}
+        
+        <center><div class="alert alert-info" role="alert">
+            {{ messages }}
+          </div> </center>
+
+        
+        {% endblock %}<br>
+
+        <div style="padding-left:15%; padding-right: 15%;">
+    {%block lis%}
+    {% if lis %}
+        {% for player in lis %}
+
+            <center>
+    <div class="alert alert-success" role="alert">
+        {{player[1]}} sold to {{player[0]}} for {{player[2]}} lakhs
+      </div> </center>
+       {% endfor %}
+
+
+      {% else %}
+      <h1>No Bids.</h1>
+      {% endif %}
+    </div>
+    
+    {% endblock %}
+</div>
+<br>
+<center><a href="/"><button class="btn btn-primary" id="back" type="submit">Home</button></a></center>
+    </body>
+</html>

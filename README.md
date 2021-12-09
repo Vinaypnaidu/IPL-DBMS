@@ -1,6 +1,13 @@
 # IPL-DBMS
 This project is done as an assignment for the UE19CS301 Database Management System course at PES University. It is done using a part of the IPL database. Functions such as add player, remove player, add match stats, display matches, display bastmen' stats, display bowlers' stats, place bid, resolve bid have been implemented. The project is done using `Flask` and `Postgresql`. 
 
+## Team members:
+1. [Vignesh Laxman ](https://github.com/vignesh-laxman-vb)
+
+2. [Vinay P ](https://github.com/Vinaypnaidu)
+
+3. [Vinay V ](https://github.com/vinayv1102)
+
 ### Installing dependencies
 Installing Flask and Sqlalchemy -
 ```bash

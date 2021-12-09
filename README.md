@@ -4,31 +4,28 @@ This project is done as an assignment for the UE19CS301 Database Management Syst
 ### Installing dependencies
 Installing Flask and Sqlalchemy -
 
-`pip3 install flask`
-
-`pip3 install sqlalchemy`
+```bash
+$ pip3 install flask
+$ pip3 install sqlalchemy```
 
 Installing Postgresql - 
 
-`brew install postgresql`
+```bash
+$ brew install postgresql```
 
 ### Running the project
 Creating and populating the database - 
 
-`psql postgres`
-
-`\i IPL_Create.sql`
-
-`\c IPL`
-
-`\i IPL_Insert_Full.sql`
+```bash 
+$ psql postgres
+\i IPL_Create.sql
+\c IPL
+\i IPL_Insert_Full.sql```
 
 Running the Flask app -
 
-`export APP_SETTINGS='config.DevelopmentConfig'`
-
-`export DATABASE_URL='postgresql://localhost/IPL'`
-
-`export FLASK_DEBUG=True`
-
-`flask run`
+```bash
+$ export APP_SETTINGS='config.DevelopmentConfig'
+$ export DATABASE_URL='postgresql://localhost/IPL'
+$ export FLASK_DEBUG=True
+$ flask run```

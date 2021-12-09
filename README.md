@@ -1,5 +1,5 @@
 # IPL-DBMS
-This project is done as an assignment for the UE19CS301 Database Management System course at PES University. It is done using a part of the IPL database. Functions such as add player, remove player, add match stats, display matches, display bastmen' stats, display bowlers' stats, place bid, resolve bid have been implemented. The project is done using `Flask` and `Postgresql`. 
+This project is done as an assignment for the UE19CS301 Database Management System course at PES University. It is done using a part of the IPL database. Functions such as add player, remove player, add match stats, display matches, display bastmen' stats, display bowlers' stats, place bid, resolve bid have been implemented. The project is done using `Flask` and `Postgresql`. The login functionality and validation while inserting match stats are yet to be implemented.
 
 ## Team members:
 1. [Vignesh Laxman ](https://github.com/vignesh-laxman-vb)
